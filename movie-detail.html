@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #eee;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #1c1c1c;
+            color: #eee;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .movie-detail {
+            padding: 20px;
+            text-align: center;
+        }
+        .movie-detail img {
+            width: 300px;
+            border-radius: 10px;
+        }
+        .movie-detail h1 {
+            color: #e94e77;
+        }
+        .back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #e94e77;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        footer {
+            background: #1c1c1c;
+            color: #eee;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Movie Details</h1>
+        </div>
+    </header>
+    <button class="back-button" onclick="window.history.back()">Back</button>
+    <main>
+        <div class="movie-detail">
+            <img id="movie-poster" src="" alt="Movie Poster">
+            <h1 id="movie-title"></h1>
+            <p id="movie-description"></p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 CineMatch. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const movieId = params.get('movie');
+
+            fetch('http://localhost:8000/recommendations.json')
+                .then(response => response.json())
+                .then(data => {
+                    const movie = data.find(m => m.title === movieId);
+                    if (movie) {
+                        document.getElementById('movie-title').textContent = movie.title;
+                        document.getElementById('movie-poster').src = 'images/movie_placeholder.jpeg'; // Replace with actual poster URL if available
+                        document.getElementById('movie-description').textContent = `Rating: ${movie.vote_average}`;
+                    } else {
+                        document.getElementById('movie-title').textContent = 'Movie not found';
+                        document.getElementById('movie-description').textContent = 'The movie you are looking for does not exist.';
+                    }
+                })
+                .catch(error => console.error('Error fetching movie details:', error));
+        });
+    </script>
+</body>
+</html>

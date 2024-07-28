@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie List</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #eee;
+            background-color: #121212;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Styles */
+        header {
+            background: #1c1c1c;
+            color: #eee;
+            padding: 1rem 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        header h1 {
+            float: left;
+        }
+
+        nav ul {
+            float: right;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-left: 15px;
+        }
+
+        nav ul li a {
+            color: #e94e77; /* Pinkish color */
+            text-decoration: none; /* Remove underline */
+        }
+
+        /* Main Section Styles */
+        main {
+            padding: 20px;
+        }
+
+        .movie-list h2 {
+            color: #e94e77; /* Pinkish color for heading */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .movies {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .movie {
+            background: #1c1c1c;
+            border-radius: 8px;
+            padding: 10px;
+            width: 200px;
+            text-align: center;
+            color: #eee;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .movie:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+        }
+
+        .movie a {
+            color: inherit; /* Use color of parent element */
+            text-decoration: none; /* Remove underline */
+        }
+
+        .movie img {
+            width: 100%;
+            border-radius: 5px;
+            display: block;
+        }
+
+        .movie h3 {
+            margin-top: 10px;
+            color: #e94e77; /* Pinkish color */
+        }
+
+        /* Footer Styles */
+        footer {
+            background: #1c1c1c;
+            color: #eee;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .movies {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>CineMatch</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="movie-list">
+            <h2>Our Movie Recommendations</h2>
+            <div class="movies">
+                <div class="movie">
+                    <a href="movie-detail.html?movie=movie1">
+                        <img src="images/movie1.jpeg" alt="Oppenheimer Poster">
+                        <h3>Oppenheimer</h3>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="movie-detail.html?movie=movie2">
+                        <img src="images/movie2.jpeg" alt="Barbie Poster">
+                        <h3>Barbie</h3>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="movie-detail.html?movie=movie3">
+                        <img src="images/movie3.jpeg" alt="Son of Saul Poster">
+                        <h3>Son of Saul</h3>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="movie-detail.html?movie=movie4">
+                        <img src="images/movie4.jpeg" alt="The Pursuit of Happyness Poster">
+                        <h3>The Pursuit of Happyness</h3>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="movie-detail.html?movie=movie5">
+                        <img src="images/movie5.jpeg" alt="Game Poster">
+                        <h3>Game</h3>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="movie-detail.html?movie=movie6">
+                        <img src="images/movie6.jpeg" alt="Like Mike Poster">
+                        <h3>Like Mike</h3>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="movie-detail.html?movie=movie7">
+                        <img src="images/movie7.jpeg" alt="Baby's Day Out Poster">
+                        <h3>Baby's Day Out</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 CineMatch. All rights reserved.</p>
+    </footer>
+</body>
+</html>

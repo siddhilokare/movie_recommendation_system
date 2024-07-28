@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendations</title>
+    <style>
+        body, h1, h2, h3, p, ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #eee;
+            background-color: #121212;
+        }
+
+        header {
+            background: #1c1c1c;
+            color: #eee;
+            padding: 1rem 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header h1 {
+            float: left;
+        }
+
+        nav ul {
+            float: right;
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-left: 15px;
+        }
+
+        nav ul li a {
+            color: #e94e77;
+            text-decoration: none;
+        }
+
+        .hero {
+            position: relative;
+            background: url('images/back.jpeg') no-repeat center center/cover;
+            color: #eee;
+            text-align: center;
+            padding: 100px 0;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better visibility */
+        }
+
+        .btn {
+            display: inline-block;
+            background: #e94e77;
+            color: #eee;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #d43f60;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px 0;
+        }
+
+        .feature {
+            background: #1c1c1c;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            width: 30%;
+            color: #eee;
+        }
+
+        .feature h3 {
+            color: #e94e77;
+        }
+
+        footer {
+            background: #1c1c1c;
+            color: #eee;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>CineMatch</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Find Your Next Favorite Movie!</h2>
+                <p>Explore our curated list of movie recommendations tailored just for you.</p>
+                <a href="movies.html" class="btn">Browse Movies</a>
+            </div>
+        </section>
+        <section class="features">
+            <div class="feature">
+                <h3>Personalized Recommendations</h3>
+                <p>Get movie suggestions based on your preferences.</p>
+            </div>
+            <div class="feature">
+                <h3>Latest Releases</h3>
+                <p>Stay updated with the newest movies hitting the theaters.</p>
+            </div>
+            <div class="feature">
+                <h3>Detailed Information</h3>
+                <p>Read detailed reviews and ratings for each movie.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Movie Recommendations. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
