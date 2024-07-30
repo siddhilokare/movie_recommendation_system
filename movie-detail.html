@@ -80,7 +80,7 @@
                     const movie = data.find(m => m.title === movieId);
                     if (movie) {
                         document.getElementById('movie-title').textContent = movie.title;
-                        document.getElementById('movie-poster').src = 'images/movie_placeholder.jpeg'; // Replace with actual poster URL if available
+                        document.getElementById('movie-poster').src = './movie_placeholder.jpeg'; // Replace with actual poster URL if available
                         document.getElementById('movie-description').textContent = `Rating: ${movie.vote_average}`;
                     } else {
                         document.getElementById('movie-title').textContent = 'Movie not found';
