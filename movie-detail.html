@@ -12,43 +12,64 @@
             margin: 0;
             padding: 0;
         }
+
         header {
             background: #1c1c1c;
             color: #eee;
             padding: 1rem 0;
             text-align: center;
         }
+
         .container {
             width: 80%;
             margin: 0 auto;
         }
+
         .movie-detail {
             padding: 20px;
             text-align: center;
         }
+
         .movie-detail img {
             width: 300px;
             border-radius: 10px;
         }
+
         .movie-detail h1 {
             color: #e94e77;
         }
-        .back-button {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background-color: #e94e77;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+
         footer {
             background: #1c1c1c;
             color: #eee;
             text-align: center;
             padding: 10px 0;
+        }
+
+        /* Back Button Styles */
+        .back-icon {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: #e94e77; /* Pinkish color */
+            color: #fff;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            text-decoration: none;
+            z-index: 1000;
+        }
+
+        .back-icon:hover {
+            background-color: #d73f63; /* Slightly darker pink */
+        }
+
+        .back-icon i {
+            pointer-events: none; /* Prevents pointer events from being captured by the icon */
         }
     </style>
 </head>
@@ -58,7 +79,6 @@
             <h1>Movie Details</h1>
         </div>
     </header>
-    <button class="back-button" onclick="window.history.back()">Back</button>
     <main>
         <div class="movie-detail">
             <img id="movie-poster" src="" alt="Movie Poster">
@@ -69,25 +89,66 @@
     <footer>
         <p>&copy; 2024 CineMatch. All rights reserved.</p>
     </footer>
+    <a href="movies.html" class="back-icon" aria-label="Back to Movies">
+        <i>&larr;</i> <!-- Unicode arrow symbol for the back icon -->
+    </a>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Get the movie identifier from the URL
             const params = new URLSearchParams(window.location.search);
             const movieId = params.get('movie');
 
-            fetch('http://localhost:8000/recommendations.json')
-                .then(response => response.json())
-                .then(data => {
-                    const movie = data.find(m => m.title === movieId);
-                    if (movie) {
-                        document.getElementById('movie-title').textContent = movie.title;
-                        document.getElementById('movie-poster').src = './movie_placeholder.jpeg'; // Replace with actual poster URL if available
-                        document.getElementById('movie-description').textContent = `Rating: ${movie.vote_average}`;
-                    } else {
-                        document.getElementById('movie-title').textContent = 'Movie not found';
-                        document.getElementById('movie-description').textContent = 'The movie you are looking for does not exist.';
-                    }
-                })
-                .catch(error => console.error('Error fetching movie details:', error));
+            // Define movie data
+            const movies = {
+                movie1: {
+                    title: 'Oppenheimer',
+                    poster: 'images/movie1.jpeg',
+                    description: 'Oppenheimer is a gripping historical drama directed by Christopher Nolan. It chronicles the life of J. Robert Oppenheimer, the man who led the Manhattan Project and played a crucial role in the development of the atomic bomb during World War II.'
+                },
+                movie2: {
+                    title: 'Barbie',
+                    poster: 'images/movie2.jpeg',
+                    description: 'Barbie is a fun-filled adventure film that brings the iconic doll to life. Directed by Greta Gerwig, the film explores Barbie\'s journey as she steps out of her perfect world into the real world, facing challenges and learning valuable life lessons.'
+                },
+                movie3: {
+                    title: 'Son of Saul',
+                    poster: 'images/movie3.jpeg',
+                    description: 'Son of Saul is a powerful and intense Holocaust drama directed by László Nemes. The film follows Saul Ausländer, a Jewish prisoner who works as a Sonderkommando in Auschwitz and seeks to provide a proper burial for his son, whom he believes has been murdered in the gas chamber.'
+                },
+                movie4: {
+                    title: 'The Pursuit of Happyness',
+                    poster: 'images/movie4.jpeg',
+                    description: 'The Pursuit of Happyness is an inspiring biographical drama starring Will Smith. It tells the true story of Chris Gardner, a struggling salesman who becomes homeless with his young son and fights against all odds to achieve his dream of becoming a successful stockbroker.'
+                },
+                movie5: {
+                    title: 'Game',
+                    poster: 'images/movie5.jpeg',
+                    description: 'Game is an engaging thriller that revolves around a high-stakes game of deception and strategy. The film follows a group of individuals who are drawn into a complex game with life-changing consequences.'
+                },
+                movie6: {
+                    title: 'Like Mike',
+                    poster: 'images/movie6.jpeg',
+                    description: 'Like Mike is a heartwarming family film about a young boy who gains extraordinary basketball skills after finding a pair of magic sneakers. The movie explores themes of friendship, family, and self-belief.'
+                },
+                movie7: {
+                    title: 'Baby\'s Day Out',
+                    poster: 'images/movie7.jpeg',
+                    description: 'Baby\'s Day Out is a comedic adventure that follows a baby who outsmarts his kidnappers and embarks on a series of amusing escapades around the city. The film is full of laughs and heartwarming moments.'
+                }
+            };
+
+            // Get movie data based on the movie ID
+            const movie = movies[movieId];
+
+            // Populate movie details
+            if (movie) {
+                document.getElementById('movie-poster').src = movie.poster;
+                document.getElementById('movie-title').textContent = movie.title;
+                document.getElementById('movie-description').textContent = movie.description;
+            } else {
+                document.getElementById('movie-title').textContent = 'Movie not found';
+                document.getElementById('movie-description').textContent = 'The movie you are looking for does not exist.';
+            }
         });
     </script>
 </body>
