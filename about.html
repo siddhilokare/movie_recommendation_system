@@ -3,13 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn more about Movie Recommendations and how our system can help you find your next favorite film.">
-    <meta property="og:title" content="About Us | Movie Recommendations">
-    <meta property="og:description" content="Learn more about Movie Recommendations and how our system can help you find your next favorite film.">
-    <meta property="og:image" content="https://www.yoursite.com/images/about-us.jpg">
-    <meta property="og:url" content="https://www.yoursite.com/about.html">
-    <meta property="og:type" content="website">
-    <title>About Us | Movie Recommendations</title>
+    <title>About Us</title>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NRY02LYGK2"></script>
     <script>
@@ -19,62 +13,48 @@
       gtag('config', 'G-NRY02LYGK2');
     </script>
     <style>
-        body, h1, h2, h3, p, ul {
+        body {
+            font-family: Arial, sans-serif;
+            color: #eee;
+            background-color: #121212;
             margin: 0;
             padding: 0;
         }
-
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #eee;
-            background-color: #121212;
-        }
-
         header {
             background: #1c1c1c;
             color: #eee;
             padding: 1rem 0;
+            text-align: center;
         }
-
         .container {
             width: 80%;
-            margin: auto;
-            overflow: hidden;
+            margin: 0 auto;
         }
-
-        header h1 {
-            float: left;
+        main {
+            padding: 20px;
         }
-
-        nav ul {
-            float: right;
+        h1 {
+            color: #e94e77;
+        }
+        .external-resources {
+            padding: 20px;
+            text-align: center;
+            background: #1c1c1c;
+        }
+        .external-resources ul {
             list-style: none;
+            padding: 0;
         }
-
-        nav ul li {
-            display: inline;
-            margin-left: 15px;
+        .external-resources ul li {
+            margin: 10px 0;
         }
-
-        nav ul li a {
+        .external-resources a {
             color: #e94e77;
             text-decoration: none;
         }
-
-        .about {
-            padding: 20px;
-            text-align: center;
+        .external-resources a:hover {
+            text-decoration: underline;
         }
-
-        .about h2 {
-            color: #e94e77;
-        }
-
-        .about p {
-            color: #ccc;
-        }
-
         footer {
             background: #1c1c1c;
             color: #eee;
@@ -86,27 +66,26 @@
 <body>
     <header>
         <div class="container">
-            <h1>Movie Recommendations</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="movies.html">Movies</a></li>
-                    <li><a href="about.html">About</a></li>
-                </ul>
-            </nav>
+            <h1>About Us</h1>
         </div>
     </header>
     <main>
-        <section class="about">
-            <h2>About Us</h2>
-            <p>We are passionate movie enthusiasts dedicated to helping you find your next favorite film. Our recommendation system uses the latest algorithms to suggest movies based on your preferences.</p>
-            <p>If you have any questions or feedback, feel free to <a href="mailto:contact@movieratings.com" style="color: #e94e77;">contact us</a>.</p>
-            <p>Explore our <a href="movies.html" style="color: #e94e77;">Movies</a> page for the latest recommendations.</p>
+        <div class="container">
+            <h1>Our Mission</h1>
+            <p>Welcome to CineMatch! We are passionate about movies and dedicated to providing you with the best movie recommendations tailored to your interests. Our goal is to help you discover films you'll love and enjoy.</p>
+            <h2>Our Team</h2>
+            <p>We are a team of movie enthusiasts and industry experts committed to bringing you accurate and engaging movie content. From in-depth reviews to the latest movie news, we're here to enhance your movie-watching experience.</p>
+        </div>
+        <section class="external-resources">
+            <h2>Learn More About Movies</h2>
+            <ul>
+                <li><a href="https://www.theplaylist.net" target="_blank" rel="noopener noreferrer">The Playlist</a> - Discover articles and reviews on the latest movies and industry news.</li>
+                <li><a href="https://www.indiewire.com" target="_blank" rel="noopener noreferrer">IndieWire</a> - Get insights into indie films and film industry trends.</li>
+            </ul>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Movie Recommendations. All rights reserved.</p>
+        <p>&copy; 2024 CineMatch. All rights reserved.</p>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>
