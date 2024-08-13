@@ -4,15 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie List</title>
-    <meta name="description" content="Browse our extensive list of movie recommendations. Find detailed information and reviews about your favorite films.">
-    <meta name="keywords" content="movie list, movie recommendations, film reviews, movie database">
-    <meta name="robots" content="index, follow">
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Movie List">
-    <meta property="og:description" content="Browse our extensive list of movie recommendations. Find detailed information and reviews about your favorite films.">
-    <meta property="og:image" content="https://www.example.com/path-to-your-image.jpg">
-    <meta property="og:url" content="https://www.example.com/movies.html">
-    <meta property="og:type" content="website">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NRY02LYGK2"></script>
     <script>
@@ -31,59 +22,49 @@
             margin: 0;
             padding: 0;
         }
-
         /* Header Styles */
         header {
             background: #1c1c1c;
             color: #eee;
             padding: 1rem 0;
         }
-
         .container {
             width: 80%;
             margin: 0 auto;
             overflow: hidden;
         }
-
         header h1 {
             float: left;
         }
-
         nav ul {
             float: right;
             list-style: none;
             margin: 0;
             padding: 0;
         }
-
         nav ul li {
             display: inline;
             margin-left: 15px;
         }
-
         nav ul li a {
-            color: #e94e77;
-            text-decoration: none;
+            color: #e94e77; /* Pinkish color */
+            text-decoration: none; /* Remove underline */
         }
-
         /* Main Section Styles */
         main {
             padding: 20px;
         }
-
         .movie-list h2 {
-            color: #e94e77;
+            color: #e94e77; /* Pinkish color for heading */
             text-align: center;
             margin-bottom: 20px;
         }
-
         .movies {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
         }
-
         .movie {
             background: #1c1c1c;
             border-radius: 8px;
@@ -94,42 +75,49 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
         .movie:hover {
             transform: scale(1.05);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
         }
-
-        .movie a {
-            color: inherit;
-            text-decoration: none;
-        }
-
         .movie img {
             width: 100%;
-            border-radius: 5px;
-            display: block;
+            border-radius: 8px;
+            height: auto;
         }
-
         .movie h3 {
-            margin-top: 10px;
-            color: #e94e77;
+            color: #e94e77; /* Pinkish color for title */
+            margin: 10px 0;
         }
-
+        .movie p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        /* External Resources Styles */
+        .external-resources {
+            padding: 20px;
+            text-align: center;
+            background: #1c1c1c;
+        }
+        .external-resources ul {
+            list-style: none;
+            padding: 0;
+        }
+        .external-resources ul li {
+            margin: 10px 0;
+        }
+        .external-resources a {
+            color: #e94e77;
+            text-decoration: none;
+        }
+        .external-resources a:hover {
+            text-decoration: underline;
+        }
         /* Footer Styles */
         footer {
             background: #1c1c1c;
             color: #eee;
             text-align: center;
             padding: 10px 0;
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .movies {
-                flex-direction: column;
-                align-items: center;
-            }
         }
     </style>
 </head>
@@ -152,51 +140,65 @@
             <div class="movies">
                 <div class="movie">
                     <a href="movie-detail.html?movie=movie1">
-                        <img src="./movie1.jpeg" alt="Oppenheimer Poster">
+                        <img src="./movie1.jpeg" alt="Oppenheimer">
                         <h3>Oppenheimer</h3>
+                        <p>A gripping historical drama directed by Christopher Nolan.</p>
                     </a>
                 </div>
                 <div class="movie">
                     <a href="movie-detail.html?movie=movie2">
-                        <img src="./movie2.jpeg" alt="Barbie Poster">
+                        <img src="./movie2.jpeg" alt="Barbie">
                         <h3>Barbie</h3>
+                        <p>A fun-filled adventure film directed by Greta Gerwig.</p>
                     </a>
                 </div>
                 <div class="movie">
                     <a href="movie-detail.html?movie=movie3">
-                        <img src="./movie3.jpeg" alt="Son of Saul Poster">
+                        <img src="./movie3.jpeg" alt="Son of Saul">
                         <h3>Son of Saul</h3>
+                        <p>A powerful Holocaust drama directed by László Nemes.</p>
                     </a>
                 </div>
                 <div class="movie">
                     <a href="movie-detail.html?movie=movie4">
-                        <img src="./movie4.jpeg" alt="The Pursuit of Happyness Poster">
+                        <img src="./movie4.jpeg" alt="The Pursuit of Happyness">
                         <h3>The Pursuit of Happyness</h3>
+                        <p>An inspiring biographical drama starring Will Smith.</p>
                     </a>
                 </div>
                 <div class="movie">
                     <a href="movie-detail.html?movie=movie5">
-                        <img src="./movie5.jpeg" alt="Game Poster">
+                        <img src="./movie5.jpeg" alt="Game">
                         <h3>Game</h3>
+                        <p>An engaging thriller with life-changing consequences.</p>
                     </a>
                 </div>
                 <div class="movie">
                     <a href="movie-detail.html?movie=movie6">
-                        <img src="./movie6.jpeg" alt="Like Mike Poster">
+                        <img src="./movie6.jpeg" alt="Like Mike">
                         <h3>Like Mike</h3>
+                        <p>A heartwarming family film about a boy with magic sneakers.</p>
                     </a>
                 </div>
                 <div class="movie">
                     <a href="movie-detail.html?movie=movie7">
-                        <img src="./movie7.jpeg" alt="Baby's Day Out Poster">
+                        <img src="./movie7.jpeg" alt="Baby's Day Out">
                         <h3>Baby's Day Out</h3>
+                        <p>A comedic adventure featuring a clever baby.</p>
                     </a>
                 </div>
             </div>
+            <section class="external-resources">
+                <h2>More About Movies</h2>
+                <ul>
+                    <li><a href="https://www.filmcomment.com" target="_blank" rel="noopener noreferrer">Film Comment</a> - Read in-depth articles and reviews about films.</li>
+                    <li><a href="https://www.criterion.com" target="_blank" rel="noopener noreferrer">The Criterion Collection</a> - Explore classic and contemporary films with expert commentary and restoration.</li>
+                </ul>
+            </section>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 CineMatch. All rights reserved.</p>
+        <p>&copy; 2024 Movie Recommendations. All rights reserved.</p>
     </footer>
 </body>
 </html>
