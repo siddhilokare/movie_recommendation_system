@@ -3,15 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover top movie recommendations tailored to your preferences. Explore personalized suggestions, latest releases, and detailed movie information.">
-    <meta name="keywords" content="movie recommendations, personalized movie suggestions, latest movie releases, movie reviews">
+    <title>Movie Recommendations</title>
+    <meta name="description" content="Discover your next favorite movie with CineMatch's curated recommendations. Explore personalized movie lists and detailed reviews.">
+    <meta name="keywords" content="movie recommendations, personalized movie lists, movie reviews, latest movies">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Movie Recommendations | CineMatch">
-    <meta property="og:description" content="Discover top movie recommendations tailored to your preferences. Explore personalized suggestions, latest releases, and detailed movie information.">
-    <meta property="og:image" content="https://www.yoursite.com/images/hero-image.jpg">
-    <meta property="og:url" content="https://www.yoursite.com/index.html">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Movie Recommendations">
+    <meta property="og:description" content="Discover your next favorite movie with CineMatch's curated recommendations. Explore personalized movie lists and detailed reviews.">
+    <meta property="og:image" content="https://www.example.com/path-to-your-image.jpg">
+    <meta property="og:url" content="https://www.example.com/index.html">
     <meta property="og:type" content="website">
-    <title>Movie Recommendations | CineMatch</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NRY02LYGK2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NRY02LYGK2');
+    </script>
     <style>
         body, h1, h2, h3, p, ul {
             margin: 0;
@@ -72,7 +81,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+            background: rgba(0, 0, 0, 0.6);
             z-index: 1;
         }
 
@@ -84,7 +93,7 @@
         .hero h2 {
             font-size: 2.5rem;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better visibility */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
 
         .btn {
@@ -153,20 +162,20 @@
         <section class="features">
             <div class="feature">
                 <h3>Personalized Recommendations</h3>
-                <p>Get movie suggestions based on your preferences. <a href="movies.html" style="color: #e94e77;">Explore our recommendations</a>.</p>
+                <p>Get movie suggestions based on your preferences.</p>
             </div>
             <div class="feature">
                 <h3>Latest Releases</h3>
-                <p>Stay updated with the newest movies hitting the theaters. <a href="movies.html" style="color: #e94e77;">Check out the latest releases</a>.</p>
+                <p>Stay updated with the newest movies hitting the theaters.</p>
             </div>
             <div class="feature">
                 <h3>Detailed Information</h3>
-                <p>Read detailed reviews and ratings for each movie. <a href="movies.html" style="color: #e94e77;">Read more reviews</a>.</p>
+                <p>Read detailed reviews and ratings for each movie.</p>
             </div>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Movie Recommendations. All rights reserved. <a href="about.html" style="color: #e94e77;">Learn more about us</a>.</p>
+        <p>&copy; 2024 Movie Recommendations. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
 </body>
