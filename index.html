@@ -4,15 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Recommendations</title>
-    <meta name="description" content="Discover your next favorite movie with CineMatch's curated recommendations. Explore personalized movie lists and detailed reviews.">
-    <meta name="keywords" content="movie recommendations, personalized movie lists, movie reviews, latest movies">
-    <meta name="robots" content="index, follow">
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Movie Recommendations">
-    <meta property="og:description" content="Discover your next favorite movie with CineMatch's curated recommendations. Explore personalized movie lists and detailed reviews.">
-    <meta property="og:image" content="https://www.example.com/path-to-your-image.jpg">
-    <meta property="og:url" content="https://www.example.com/index.html">
-    <meta property="og:type" content="website">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NRY02LYGK2"></script>
     <script>
@@ -26,45 +17,37 @@
             margin: 0;
             padding: 0;
         }
-
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             color: #eee;
             background-color: #121212;
         }
-
         header {
             background: #1c1c1c;
             color: #eee;
             padding: 1rem 0;
         }
-
         .container {
             width: 80%;
             margin: auto;
             overflow: hidden;
         }
-
         header h1 {
             float: left;
         }
-
         nav ul {
             float: right;
             list-style: none;
         }
-
         nav ul li {
             display: inline;
             margin-left: 15px;
         }
-
         nav ul li a {
             color: #e94e77;
             text-decoration: none;
         }
-
         .hero {
             position: relative;
             background: url('./back.jpeg') no-repeat center center/cover;
@@ -73,7 +56,6 @@
             padding: 100px 0;
             overflow: hidden;
         }
-
         .hero::before {
             content: "";
             position: absolute;
@@ -84,18 +66,15 @@
             background: rgba(0, 0, 0, 0.6);
             z-index: 1;
         }
-
         .hero-content {
             position: relative;
             z-index: 2;
         }
-
         .hero h2 {
             font-size: 2.5rem;
             margin-bottom: 20px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
-
         .btn {
             display: inline-block;
             background: #e94e77;
@@ -106,17 +85,14 @@
             font-weight: bold;
             transition: background 0.3s ease;
         }
-
         .btn:hover {
             background: #d43f60;
         }
-
         .features {
             display: flex;
             justify-content: space-around;
             padding: 20px 0;
         }
-
         .feature {
             background: #1c1c1c;
             border-radius: 8px;
@@ -125,16 +101,33 @@
             width: 30%;
             color: #eee;
         }
-
         .feature h3 {
             color: #e94e77;
         }
-
         footer {
             background: #1c1c1c;
             color: #eee;
             text-align: center;
             padding: 10px 0;
+        }
+        .external-resources {
+            padding: 20px;
+            text-align: center;
+            background: #1c1c1c;
+        }
+        .external-resources ul {
+            list-style: none;
+            padding: 0;
+        }
+        .external-resources ul li {
+            margin: 10px 0;
+        }
+        .external-resources a {
+            color: #e94e77;
+            text-decoration: none;
+        }
+        .external-resources a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -161,17 +154,25 @@
         </section>
         <section class="features">
             <div class="feature">
-                <h3>Personalized Recommendations</h3>
+                <h3><a href="movies.html#personalized-recommendations">Personalized Recommendations</a></h3>
                 <p>Get movie suggestions based on your preferences.</p>
             </div>
             <div class="feature">
-                <h3>Latest Releases</h3>
+                <h3><a href="movies.html#latest-releases">Latest Releases</a></h3>
                 <p>Stay updated with the newest movies hitting the theaters.</p>
             </div>
             <div class="feature">
-                <h3>Detailed Information</h3>
+                <h3><a href="movies.html#detailed-information">Detailed Information</a></h3>
                 <p>Read detailed reviews and ratings for each movie.</p>
             </div>
+        </section>
+        <section class="external-resources">
+            <h2>Further Reading</h2>
+            <ul>
+                <li><a href="https://www.imdb.com" target="_blank" rel="noopener noreferrer">IMDb - The Internet Movie Database</a> - Find detailed information about movies and TV shows, including reviews and ratings.</li>
+                <li><a href="https://www.rottentomatoes.com" target="_blank" rel="noopener noreferrer">Rotten Tomatoes - Movie Reviews</a> - Check out reviews and ratings from critics and audiences.</li>
+                <li><a href="https://www.boxofficemojo.com" target="_blank" rel="noopener noreferrer">Box Office Mojo</a> - Get insights into box office performance and movie industry trends.</li>
+            </ul>
         </section>
     </main>
     <footer>
