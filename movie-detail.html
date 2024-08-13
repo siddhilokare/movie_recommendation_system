@@ -4,15 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Details</title>
-    <meta name="description" content="View detailed information about your selected movie including posters and descriptions. Explore in-depth movie details with CineMatch.">
-    <meta name="keywords" content="movie details, film information, movie descriptions, CineMatch">
-    <meta name="robots" content="index, follow">
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Movie Details">
-    <meta property="og:description" content="View detailed information about your selected movie including posters and descriptions. Explore in-depth movie details with CineMatch.">
-    <meta property="og:image" content="https://www.example.com/path-to-your-image.jpg">
-    <meta property="og:url" content="https://www.example.com/movie-detail.html">
-    <meta property="og:type" content="website">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NRY02LYGK2"></script>
     <script>
@@ -29,46 +20,38 @@
             margin: 0;
             padding: 0;
         }
-
         header {
             background: #1c1c1c;
             color: #eee;
             padding: 1rem 0;
             text-align: center;
         }
-
         .container {
             width: 80%;
             margin: 0 auto;
         }
-
         .movie-detail {
             padding: 20px;
             text-align: center;
         }
-
         .movie-detail img {
             width: 300px;
             border-radius: 10px;
         }
-
         .movie-detail h1 {
             color: #e94e77;
         }
-
         footer {
             background: #1c1c1c;
             color: #eee;
             text-align: center;
             padding: 10px 0;
         }
-
-        /* Back Button Styles */
         .back-icon {
             position: fixed;
             top: 20px;
             left: 20px;
-            background: #e94e77; /* Pinkish color */
+            background: #e94e77;
             color: #fff;
             border-radius: 50%;
             width: 40px;
@@ -80,13 +63,30 @@
             text-decoration: none;
             z-index: 1000;
         }
-
         .back-icon:hover {
-            background-color: #d73f63; /* Slightly darker pink */
+            background-color: #d73f63;
         }
-
         .back-icon i {
-            pointer-events: none; /* Prevents pointer events from being captured by the icon */
+            pointer-events: none;
+        }
+        .external-resources {
+            padding: 20px;
+            text-align: center;
+            background: #1c1c1c;
+        }
+        .external-resources ul {
+            list-style: none;
+            padding: 0;
+        }
+        .external-resources ul li {
+            margin: 10px 0;
+        }
+        .external-resources a {
+            color: #e94e77;
+            text-decoration: none;
+        }
+        .external-resources a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -102,20 +102,26 @@
             <h1 id="movie-title"></h1>
             <p id="movie-description"></p>
         </div>
+        <section class="external-resources">
+            <h2>Learn More</h2>
+            <ul>
+                <li><a href="https://www.imdb.com" target="_blank" rel="noopener noreferrer">IMDb - The Internet Movie Database</a> - Find detailed information about movies and TV shows, including reviews and ratings.</li>
+                <li><a href="https://www.rottentomatoes.com" target="_blank" rel="noopener noreferrer">Rotten Tomatoes - Movie Reviews</a> - Check out reviews and ratings from critics and audiences.</li>
+                <li><a href="https://www.boxofficemojo.com" target="_blank" rel="noopener noreferrer">Box Office Mojo</a> - Get insights into box office performance and movie industry trends.</li>
+            </ul>
+        </section>
     </main>
     <footer>
         <p>&copy; 2024 CineMatch. All rights reserved.</p>
     </footer>
     <a href="movies.html" class="back-icon" aria-label="Back to Movies">
-        <i>&larr;</i> <!-- Unicode arrow symbol for the back icon -->
+        <i>&larr;</i>
     </a>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Get the movie identifier from the URL
             const params = new URLSearchParams(window.location.search);
             const movieId = params.get('movie');
 
-            // Define movie data
             const movies = {
                 movie1: {
                     title: 'Oppenheimer',
@@ -154,10 +160,8 @@
                 }
             };
 
-            // Get movie data based on the movie ID
             const movie = movies[movieId];
 
-            // Populate movie details
             if (movie) {
                 document.getElementById('movie-poster').src = movie.poster;
                 document.getElementById('movie-title').textContent = movie.title;
