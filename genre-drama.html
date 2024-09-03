@@ -28,6 +28,39 @@
         h1 {
             color: #e94e77;
         }
+        .movies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .movie {
+            background: #1c1c1c;
+            border-radius: 8px;
+            padding: 10px;
+            width: 200px;
+            text-align: center;
+            color: #eee;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .movie:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+        }
+        .movie img {
+            width: 100%;
+            border-radius: 8px;
+            height: auto;
+        }
+        .movie h3 {
+            color: #e94e77;
+            margin: 10px 0;
+        }
+        .movie p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
         footer {
             background: #1c1c1c;
             color: #eee;
@@ -68,12 +101,23 @@
         <div class="container">
             <h1>Popular Drama Movies</h1>
             <p>Explore our selection of gripping drama movies that will stir your emotions.</p>
-            <!-- List of drama movies -->
-            <ul>
-                <li><a href="movie-detail.html?movie=movie3">Son of Saul</a></li>
-                <li><a href="movie-detail.html?movie=movie4">The Pursuit of Happyness</a></li>
-                <!-- Add more drama movies  -->
-            </ul>
+            <div class="movies">
+                <div class="movie">
+                    <a href="https://www.imdb.com/title/tt0910996/" target="_blank" rel="noopener noreferrer">
+                        <img src="./movie3.jpeg" alt="Son of Saul">
+                        <h3>Son of Saul</h3>
+                        <p>A powerful Holocaust drama directed by László Nemes.</p>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="https://www.imdb.com/title/tt0454921/" target="_blank" rel="noopener noreferrer">
+                        <img src="./movie4.jpeg" alt="The Pursuit of Happyness">
+                        <h3>The Pursuit of Happyness</h3>
+                        <p>An inspiring biographical drama starring Will Smith.</p>
+                    </a>
+                </div>
+                <!-- Add more drama movies here -->
+            </div>
         </div>
     </main>
     <footer>
