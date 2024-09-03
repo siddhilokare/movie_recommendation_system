@@ -28,6 +28,39 @@
         h1 {
             color: #e94e77;
         }
+        .movies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .movie {
+            background: #1c1c1c;
+            border-radius: 8px;
+            padding: 10px;
+            width: 200px;
+            text-align: center;
+            color: #eee;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .movie:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+        }
+        .movie img {
+            width: 100%;
+            border-radius: 8px;
+            height: auto;
+        }
+        .movie h3 {
+            color: #e94e77;
+            margin: 10px 0;
+        }
+        .movie p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
         footer {
             background: #1c1c1c;
             color: #eee;
@@ -68,12 +101,23 @@
         <div class="container">
             <h1>Popular Action Movies</h1>
             <p>Explore our selection of thrilling action movies that will keep you on the edge of your seat.</p>
-            <!-- List of action movies -->
-            <ul>
-                <li><a href="movie-detail.html?movie=movie1">Oppenheimer</a></li>
-                <li><a href="movie-detail.html?movie=movie5">Game</a></li>
-                <!-- Add more action movies -->
-            </ul>
+            <div class="movies">
+                <div class="movie">
+                    <a href="https://www.imdb.com/title/tt10293406/" target="_blank" rel="noopener noreferrer">
+                        <img src="./movie1.jpeg" alt="Oppenheimer">
+                        <h3>Oppenheimer</h3>
+                        <p>A gripping historical drama directed by Christopher Nolan.</p>
+                    </a>
+                </div>
+                <div class="movie">
+                    <a href="https://www.imdb.com/title/tt0252501/" target="_blank" rel="noopener noreferrer">
+                        <img src="./movie5.jpeg" alt="Game">
+                        <h3>Game</h3>
+                        <p>An engaging thriller with life-changing consequences.</p>
+                    </a>
+                </div>
+                <!-- Add more action movies here -->
+            </div>
         </div>
     </main>
     <footer>
