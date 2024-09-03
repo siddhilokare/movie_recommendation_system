@@ -25,12 +25,14 @@
       gtag('config', 'G-NRY02LYGK2');
     </script>
     <style>
+        /* Global Styles */
         body, h1, h2, h3, p, ul {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #eee;
             background-color: #121212;
@@ -41,32 +43,41 @@
             padding: 1rem 0;
         }
         .container {
-            width: 80%;
+            width: 90%;
+            max-width: 1200px;
             margin: auto;
             overflow: hidden;
         }
         header h1 {
             float: left;
+            font-size: 2rem;
         }
         nav ul {
             float: right;
             list-style: none;
+            display: flex;
+            align-items: center;
         }
         nav ul li {
-            display: inline;
-            margin-left: 15px;
+            margin-left: 20px;
         }
         nav ul li a {
             color: #e94e77;
             text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #d43f60;
         }
         .hero {
             position: relative;
             background: url('./back.jpeg') no-repeat center center/cover;
             color: #eee;
             text-align: center;
-            padding: 100px 0;
+            padding: 120px 20px;
             overflow: hidden;
+            border-bottom: 4px solid #e94e77;
         }
         .hero::before {
             content: "";
@@ -75,7 +86,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.5);
             z-index: 1;
         }
         .hero-content {
@@ -83,49 +94,74 @@
             z-index: 2;
         }
         .hero h2 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
         }
         .btn {
             display: inline-block;
             background: #e94e77;
             color: #eee;
-            padding: 10px 20px;
+            padding: 12px 25px;
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
-            transition: background 0.3s ease;
+            transition: background 0.3s ease, transform 0.3s ease;
         }
         .btn:hover {
             background: #d43f60;
+            transform: scale(1.05);
         }
         .features {
             display: flex;
-            justify-content: space-around;
-            padding: 20px 0;
+            justify-content: space-between;
+            padding: 40px 20px;
+            background: #1c1c1c;
+            border-bottom: 4px solid #e94e77;
         }
         .feature {
-            background: #1c1c1c;
+            background: #2c2c2c;
             border-radius: 8px;
             padding: 20px;
             text-align: center;
             width: 30%;
             color: #eee;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
         }
         .feature h3 {
             color: #e94e77;
+            margin-bottom: 15px;
         }
-        footer {
-            background: #1c1c1c;
-            color: #eee;
+        .related-content {
+            padding: 40px 20px;
             text-align: center;
-            padding: 10px 0;
+        }
+        .related-content h3 {
+            margin-bottom: 20px;
+            color: #e94e77;
+        }
+        .related-content p a {
+            color: #e94e77;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .related-content p a:hover {
+            color: #d43f60;
         }
         .external-resources {
-            padding: 20px;
-            text-align: center;
+            padding: 40px 20px;
             background: #1c1c1c;
+            text-align: center;
+        }
+        .external-resources h2 {
+            margin-bottom: 20px;
+            color: #e94e77;
         }
         .external-resources ul {
             list-style: none;
@@ -137,9 +173,17 @@
         .external-resources a {
             color: #e94e77;
             text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
         }
         .external-resources a:hover {
-            text-decoration: underline;
+            color: #d43f60;
+        }
+        footer {
+            background: #1c1c1c;
+            color: #eee;
+            text-align: center;
+            padding: 20px 0;
         }
     </style>
 </head>
@@ -151,6 +195,8 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="movies.html">Movies</a></li>
+                    <li><a href="action-movies.html">Action Movies</a></li>
+                    <li><a href="drama-movies.html">Drama Movies</a></li>
                     <li><a href="about.html">About</a></li>
                 </ul>
             </nav>
@@ -179,21 +225,20 @@
             </div>
         </section>
         <section class="related-content">
-            <h3>Learn More About Movie Genres</h3>
+            <h3>Explore More Movie Genres</h3>
             <p><a href="action-movies.html">Action Movies</a></p>
-            <p><a href="comedy-movies.html">Comedy Movies</a></p>
+            <p><a href="drama-movies.html">Drama Movies</a></p>
         </section>
         <section class="external-resources">
             <h2>Further Reading</h2>
             <ul>
-                <li><a href="https://www.imdb.com" target="_blank" rel="noopener noreferrer">IMDb - The Internet Movie Database</a></li>
-                <li><a href="https://www.rottentomatoes.com" target="_blank" rel="noopener noreferrer">Rotten Tomatoes - Movie Reviews</a></li>
-                <li><a href="https://www.boxofficemojo.com" target="_blank" rel="noopener noreferrer">Box Office Mojo</a></li>
+                <li><a href="action-movies.html">Explore Action Movies</a></li>
+                <li><a href="drama-movies.html">Browse Drama Movies</a></li>
             </ul>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Movie Recommendations. All rights reserved.</p>
+        <p>&copy; 2024 CineMatch. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
 </body>
