@@ -96,27 +96,29 @@
             <h1>Movie Details</h1>
         </div>
     </header>
-    <main>
-        <div class="movie-detail">
-            <img id="movie-poster" src="" alt="Movie Poster">
-            <h1 id="movie-title"></h1>
-            <p id="movie-description"></p>
-        </div>
-        <section class="external-resources">
-            <h2>Learn More</h2>
-            <ul>
-                <li><a href="https://www.imdb.com" target="_blank" rel="noopener noreferrer">IMDb - The Internet Movie Database</a> - Find detailed information about movies and TV shows, including reviews and ratings.</li>
-                <li><a href="https://www.rottentomatoes.com" target="_blank" rel="noopener noreferrer">Rotten Tomatoes - Movie Reviews</a> - Check out reviews and ratings from critics and audiences.</li>
-                <li><a href="https://www.boxofficemojo.com" target="_blank" rel="noopener noreferrer">Box Office Mojo</a> - Get insights into box office performance and movie industry trends.</li>
-            </ul>
-        </section>
-    </main>
+   <main>
+    <div class="movie-detail">
+        <img id="movie-poster" src="" alt="Movie Poster">
+        <h1 id="movie-title"></h1>
+        <p id="movie-description"></p>
+        <p><a href="movies.html">Back to Movie List</a></p>
+    </div>
+    <section class="external-resources">
+        <h2>Learn More</h2>
+        <ul>
+            <li><a href="https://www.imdb.com" target="_blank" rel="noopener noreferrer">IMDb - The Internet Movie Database</a> - Find detailed information about movies and TV shows, including reviews and ratings.</li>
+            <li><a href="https://www.rottentomatoes.com" target="_blank" rel="noopener noreferrer">Rotten Tomatoes - Movie Reviews</a> - Check out reviews and ratings from critics and audiences.</li>
+            <li><a href="https://www.boxofficemojo.com" target="_blank" rel="noopener noreferrer">Box Office Mojo</a> - Get insights into box office performance and movie industry trends.</li>
+        </ul>
+    </section>
+</main>
+
     <footer>
         <p>&copy; 2024 CineMatch. All rights reserved.</p>
     </footer>
-    <a href="movies.html" class="back-icon" aria-label="Back to Movies">
-        <i>&larr;</i>
-    </a>
+<a href="movies.html" class="back-icon" aria-label="Back to Movies">
+    <i>&larr;</i>
+</a>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const params = new URLSearchParams(window.location.search);
