@@ -1,3 +1,5 @@
 User-agent: *
-Disallow: /private/
-Allow: /
+Disallow: 
+Crawl-delay: 5
+Disallow: /cgi-bin/
+Sitemap: https://siddhilokare.github.io/movie_recommendation_system/sitemap.xml
